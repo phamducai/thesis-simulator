@@ -35,9 +35,9 @@ client.on("connect", () => {
   // client.publish("up/", JSON.stringify(msgObj));
   // //sensor add
   // const msgObj = {
-  //   deviceName: "Sensor",
+  //   deviceName: "Sensors",
   //   action: "provision",
-  //   deviceType: "Sensor",
+  //   deviceType: "Sensors",
   //   channels: {
   //     temp: 110,
   //     humidity: 220,
@@ -82,7 +82,7 @@ client.on("connect", () => {
   // }, 2000);
   //Ade relay
   setInterval(() => {
-    const deviceId = "6278c48a12ccdde504ae8f3e";
+    const deviceId = "627bab0610223b7063c9887f";
     const msgObj = {
       action: "telemetry",
       channels: {
