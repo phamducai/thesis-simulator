@@ -1,5 +1,4 @@
-import mqtt from "mqtt";
-
+const mqtt = require("mqtt");
 const client = mqtt.connect("mqtt://test.mosquitto.org", {
   reconnectPeriod: 0,
 });
@@ -18,32 +17,24 @@ client.on("connect", () => {
 
   // code sau danh cho provision, chi chay 1 lan
 
-  //relay ADe
+  // //relay ADe
   // const msgObj = {
   //   action: "provision",
-  //   deviceName: "May bom",
+  //   deviceName: "Maads bom",
   //   deviceType: "RelayAde",
-  //   channels: {
-  //     Relay_state: true,
-  //     vrms: 220,
-  //     irms: 10,
-  //     power: 110,
-  //     enegy: 310,
-  //   },
-  //   refRoom: "627411c4fdef6aa7eb4705aa",
   // };
   // client.publish("up/", JSON.stringify(msgObj));
   // //sensor add
   // const msgObj = {
   //   deviceName: "Sensors",
   //   action: "provision",
-  //   deviceType: "Sensors",
+  //   deviceType: "Sensor",
   //   channels: {
   //     temp: 110,
   //     humidity: 220,
   //     airquality: 10,
   //   },
-  //   refRoom: "627411c4fdef6aa7eb4705aa",
+  //   refRoom: "6281a811b58e0cf27c8283ae",
   // };
   // client.publish("up/", JSON.stringify(msgObj));
 
@@ -80,9 +71,10 @@ client.on("connect", () => {
   //   };
   //   client.publish("up/" + deviceId, JSON.stringify(msgObj));
   // }, 2000);
-  //Ade relay
+  // Ade relay
+
   setInterval(() => {
-    const deviceId = "627bab0610223b7063c9887f";
+    const deviceId = "62867439f27e39289c9dc6a4";
     const msgObj = {
       action: "telemetry",
       channels: {
@@ -109,5 +101,3 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
-
-// test git
